@@ -1,2 +1,5 @@
-node_modules
+/node_modules
 .next
+/node_modules/postcss/lib
+/node_modules/.bin
+/node_modules/doctrine

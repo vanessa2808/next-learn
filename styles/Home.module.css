@@ -1,5 +1,50 @@
 .container {
   padding: 0 2rem;
+  @apply mt-4;
+}
+
+.customHeaderTitle {
+  @apply font-bold text-[20px];
+}
+
+.customBorderStyle {
+  @apply !border-b-2 border-red-600 w-[100%];
+}
+
+.customImageCompo {
+  @apply object-contain max-w-[100%] h-[100px] rounded-xl mt-10 px-3
+}
+
+.customFormInput {
+  @apply h-10 border-2 border-red-600 w-[500px];
+}
+
+.customFormInputNotFirst {
+  @apply h-10 border-2 border-red-600 w-[500px] mt-5;
+}
+
+.invalidFeedback {
+  @apply text-red-600;
+}
+
+.customDivImage {
+  @apply flex items-center float-left w-full !ml-[42%] text-center !m-auto;
+}
+
+.customButtonSubmit {
+  @apply !bg-red-600 rounded-xl text-white border-red-600 border-[2px] w-[10%] mt-10 h-[40px];
+}
+
+.customButtonBack {
+  @apply !bg-red-50 text-black ml-5 border-red-600 border-[2px] w-[10%] mt-10 h-[40px];
+}
+
+.customNameRender {
+  @apply font-bold text-left mt-10 text-[25px];
+}
+
+.customArtistName {
+  @apply font-normal mt-3 text-[20px];
 }
 
 .main {
