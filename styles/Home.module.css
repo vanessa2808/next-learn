@@ -28,7 +28,7 @@
 }
 
 .customDivImage {
-  @apply flex items-center float-left w-full !ml-[42%] text-center !m-auto;
+  @apply flex items-center float-left w-full text-center !m-auto;
 }
 
 .customButtonSubmit {

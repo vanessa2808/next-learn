@@ -42,11 +42,11 @@ export default function Home({ songs }) {
                 router.push(`/detail/${songItem.id}`);
               }} className={styles.customNameRender}>
               { songItem.name }
-              <Col className={styles.customArtistName}>{ songItem.artist.name}</Col>
+              <Col className={styles.customArtistName}>{ songItem.artist?.name}</Col>
             </Row>
           </div>
         ))}
-        <Row className="text-center">
+        <Row className="text-left mb-5">
           <Button className={styles.customButtonSubmit} onClick={ handleClick }>Create</Button>
         </Row>
         </Row>

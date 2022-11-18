@@ -48,7 +48,7 @@ export default function Home({ song }) {
         <div className="flex justify-center items-center mt-10">
           <Row className="w-[50%]">
             <Col className="font-bold text-[25px]">{song.name}</Col>
-            <p color="grey.700">{song.artist.name}</p>
+            <p color="grey.700">{song.artist?.name}</p>
             <iframe
               width="100%"
               height="315"

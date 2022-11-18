@@ -6,8 +6,25 @@ import { useRouter } from "next/router";
 import * as Yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { PrismaClient } from '@prisma/client';
 
-export default function Home() {
+export async function getStaticProps(dataItem: any) {
+  const prisma = new PrismaClient();
+
+  const songItem = await prisma.song.create({
+    data: { name: '1' },
+  });
+
+  console.log(dataItem);
+
+  return {
+    props: {
+      songItem
+    }
+  };
+}
+
+export default function Home({ songItem }) {
   const router = useRouter();
   const validationSchema = Yup.object().shape({
     name: Yup.string().required("Name is required"),
@@ -25,6 +42,7 @@ export default function Home() {
 
   const onSubmit = (data: any) => {
     router.push('/');
+    // handleCreateSong(data);
     console.log(123);
     return false;
   }
